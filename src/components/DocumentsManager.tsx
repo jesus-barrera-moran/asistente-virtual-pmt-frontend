@@ -26,6 +26,7 @@ import config from '../config/env';
 type Document = {
   id: number;
   title: string;
+  interfaz: string;
   content: string;
   file?: File | null;
 };
@@ -87,6 +88,7 @@ const DocumentsManager: React.FC = () => {
           return {
             id: index + 1,
             title: doc.nombre,
+            interfaz: doc.nombre_interfaz,
             content: matchingFile ? matchingFile.content : '', // Si no existe en bucket, mostrar vacío
           };
         });
@@ -254,7 +256,7 @@ const DocumentsManager: React.FC = () => {
 
         toast({
           title: 'Cambios guardados',
-          description: `El documento '${selectedDocument.title}' ha sido guardado exitosamente.`,
+          description: `El documento '${selectedDocument.interfaz}' ha sido guardado exitosamente.`,
           status: 'success',
           duration: 5000,
           isClosable: true,
@@ -292,7 +294,7 @@ const DocumentsManager: React.FC = () => {
             <Select placeholder="Selecciona un documento" onChange={handleDocumentChange}>
               {documents.map((doc) => (
                 <option key={doc.id} value={doc.id}>
-                  {doc.title}
+                  {doc.interfaz}
                 </option>
               ))}
             </Select>
@@ -302,7 +304,7 @@ const DocumentsManager: React.FC = () => {
             <Box mt={6}>
               <FormControl id={`title-${selectedDocument.id}`}>
                 <FormLabel>Título</FormLabel>
-                <Input type="text" value={selectedDocument.title} readOnly isReadOnly />
+                <Input type="text" value={selectedDocument.interfaz} readOnly isReadOnly />
               </FormControl>
 
               <FormControl id={`content-${selectedDocument.id}`} mt={4}>

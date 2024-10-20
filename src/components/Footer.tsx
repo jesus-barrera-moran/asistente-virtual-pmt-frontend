@@ -8,18 +8,18 @@ import {
   Tooltip,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FiDownload, FiMail } from 'react-icons/fi';
+// import { FiDownload, FiMail } from 'react-icons/fi';
 // import Link from '@/components/link/Link';
 
 export default function Footer() {
   const textColor = useColorModeValue('gray.500', 'white');
   
-  const handleManualDownload = () => {
-    // Lógica para descargar el manual
-    // PENDIENTE: Cambiar la ruta del manual
-    const manualUrl = '/manual_de_usuario.pdf'; // Ruta del archivo del manual
-    window.open(manualUrl, '_blank'); // Abrir el archivo en una nueva pestaña
-  };
+  // const handleManualDownload = () => {
+  //   // Lógica para descargar el manual
+  //   // PENDIENTE: Cambiar la ruta del manual
+  //   const manualUrl = '/manual_de_usuario.pdf'; // Ruta del archivo del manual
+  //   window.open(manualUrl, '_blank'); // Abrir el archivo en una nueva pestaña
+  // };
 
   return (
     <Flex
@@ -51,7 +51,7 @@ export default function Footer() {
       </Text>
 
       {/* Íconos para soporte y descarga */}
-      <Flex alignItems="center" justifyContent="center">
+      {/* <Flex alignItems="center" justifyContent="center">
         <Tooltip label="Contactar Soporte Técnico" aria-label="Correo soporte técnico">
           <IconButton
             aria-label="Correo de soporte técnico"
@@ -76,7 +76,7 @@ export default function Footer() {
             onClick={handleManualDownload}
           />
         </Tooltip>
-      </Flex>
+      </Flex> */}
 
       {/* Links de información adicional */}
       {/* <List display="flex">

@@ -166,7 +166,7 @@ function SidebarContent(props: SidebarContent) {
           <Icon as={FiLink} width="16px" height="16px" color="inherit" />
         </Button>
 
-        {/* Botón para copiar el sitio web de la pastelería */}
+        {/* Botón para copiar el sitio web de la municipalidad */}
         <Button
           variant="transparent"
           border="1px solid"
@@ -179,13 +179,13 @@ function SidebarContent(props: SidebarContent) {
           justifyContent={'center'}
           alignItems="center"
           onClick={handleCopyWebsite}
-          title="Copiar sitio web de la pastelería"
+          title="Copiar sitio web de la municipalidad"
           mr={2} // Espaciado entre los botones
         >
           <Icon as={FiGlobe} width="16px" height="16px" color="inherit" />
         </Button>
 
-        {/* Botón para copiar el email de la pastelería */}
+        {/* Botón para copiar el email de la municipalidad */}
         <Button
           variant="transparent"
           border="1px solid"
@@ -198,7 +198,7 @@ function SidebarContent(props: SidebarContent) {
           justifyContent={'center'}
           alignItems="center"
           onClick={handleCopyEmail}
-          title="Copiar email de la pastelería"
+          title="Copiar email de la municipalidad"
         >
           <Icon as={FiMail} width="16px" height="16px" color="inherit" />
         </Button>
