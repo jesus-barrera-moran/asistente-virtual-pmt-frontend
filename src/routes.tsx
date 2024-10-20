@@ -35,11 +35,6 @@ const routes: IRoute[] = [
         layout: '/admin',
         path: '/documents',
       },
-      {
-        name: 'Bases de Datos',
-        layout: '/admin',
-        path: '/databases',
-      },
     ],
   },
   {

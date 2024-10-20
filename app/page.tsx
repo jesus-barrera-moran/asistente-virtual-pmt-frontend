@@ -17,6 +17,8 @@ import { useRouter } from 'next/navigation';
 import { MdAutoAwesome, MdPerson } from 'react-icons/md';
 import config from '../src/config/env';
 
+import logo from '../public/img/chat/Banner.png';
+
 export default function Chat(props: { apiKeyApp: string }) {
   // Input States
   const [inputOnSubmit, setInputOnSubmit] = useState<string>('');
@@ -142,14 +144,14 @@ export default function Chat(props: { apiKeyApp: string }) {
       position="relative"
       minH={{ base: '85vh', '2xl': '85vh' }}
     >
-      {logoFondo && (<Img
-        src={logoFondo}
+      <Img
+        src={logo.src}
         position={'absolute'}
         w="700px"
         left="50%"
         top="50%"
         transform={'translate(-50%, -50%)'}
-      />)}
+      />
       <Flex
         direction="column"
         mx="auto"

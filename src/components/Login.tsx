@@ -126,9 +126,9 @@ const Login: React.FC = () => {
               </Button>
             </Stack>
             <Stack pt={4}>
-              <Text align="center">
+              {/* <Text align="center">
                 ¿No tienes una cuenta? <Link href="/register" color="blue.400">Crea tu pastelería</Link>
-              </Text>
+              </Text> */}
               {/* <Text align="center">
                 <Link color="blue.400">¿Olvidaste tu contraseña?</Link>
               </Text> */}

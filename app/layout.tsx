@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const { uuid } = useParams(); // Obtenemos el parámetro de la URL
 
   const isPublicRoute = pathname?.startsWith('/publico'); // Verifica si la ruta es de clientes
-  const isExternal = pathname?.startsWith('/register') || pathname?.startsWith('/login'); // Rutas externas
+  const isExternal = pathname?.startsWith('/login'); // Rutas externas
 
   const [loading, setLoading] = useState(!isExternal); // Estado de carga
 
@@ -84,18 +84,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       const data = await response.json();
 
-      let logo_menu_url = "";
-      let logo_fondo_url = "";
-      if (data?.logos?.length > 0) {
-        logo_menu_url = data.logos.find((logo: any) => logo.file_name === 'logo_menu')?.url || '';
-        logo_fondo_url = data.logos.find((logo: any) => logo.file_name === 'logo_fondo')?.url || '';
-      }
-
       localStorage.setItem('email_pasteleria', data.email);
       localStorage.setItem('website_pasteleria', data.url_website);
       localStorage.setItem('nombre_pasteleria', data.nombre);
-      localStorage.setItem('logo_menu', logo_menu_url);
-      localStorage.setItem('logo_fondo', logo_fondo_url);
 
       // toast({
       //   title: 'Datos obtenidos',
